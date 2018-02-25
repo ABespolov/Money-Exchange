@@ -3,6 +3,7 @@ Object.freeze(assert);
 const makeExchange = require('./src/index.js');
 
 describe('makeExchange function', () => {
+
   it('should return ERROR object if the currency more than 10000', () => {
     assert.deepEqual(makeExchange(10001), {error: "You are rich, my friend! We don't have so much coins for exchange"});
   });
@@ -60,6 +61,7 @@ describe('makeExchange function', () => {
   it('should return amount of trapped water correctly 1', () => {
     assert.deepEqual(makeExchange(142), {"H":2,"Q":1,"D":1,"N":1,"P":2});
     assert.deepEqual(makeExchange(149), {"H":2,"Q":1,"D":2,"P":4});
+
   });
 
   it('should return amount of trapped water correctly 2', () => {
